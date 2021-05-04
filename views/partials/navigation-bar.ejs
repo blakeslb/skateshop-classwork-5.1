@@ -1,0 +1,18 @@
+<nav>
+    <img src="/images/logo.png" alt="logo for The Skate Shop">
+    <div class="container-navigation-links">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            
+            <!-- Only show the inventory link if signedIn is true  -->
+
+                <% if (userSignedIn == true) { %>
+                    <li>
+                        <a href="/inventory">Inventory</a>
+                    </li> 
+                <% } else { userSignedIn == false } %>
+
+        </ul>
+    </div>
+</nav>

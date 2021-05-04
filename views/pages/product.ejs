@@ -1,0 +1,46 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/navigation-bar') -%> 
+
+    <div class="container-content-main">
+
+
+
+
+        <h1>Product: <%= inventoryItem.name %></h1>
+
+        <p>Hello <%= name %>! See details about the prodcut below or go back to the <a href="/inventory">inventory page.</a></p>
+
+        <p>Name: <%= inventoryItem.name %></p>
+
+        <p>Number of Wheels: <%= inventoryItem.numberOfWheels %></p>
+
+        
+         <!-- <% if(sale=='true') { %>
+            <% let salePrice = inventoryItem.price * .9 %>
+            <%inventoryItem.price = salePrice %>
+        <% } %>  -->
+
+        <p>Price: $<%= inventoryItem.price %></p> 
+
+        
+
+        <p>This is filler code to make the page look nice. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolores, sunt, quasi consequatur alias accusantium assumenda ad rem laboriosam soluta maiores repudiandae, facilis eius hic debitis modi? Labore, ipsum temporibus.</p>
+
+        <!-- Create a list and display the products in the inventory using a forEach loop -->
+
+        <% inventoryArray.forEach(inventoryItem => { %>
+            <ul>
+                <li>  <a href="/product/<%= inventoryItem._id %>">
+                    <%= inventoryItem.name %>
+                </a> </li>
+            </ul>
+
+        <% }); %>
+
+        
+
+        
+    </div>
+
+<%- include('../partials/footer') -%> 
